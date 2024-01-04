@@ -1,4 +1,11 @@
-#calculator {
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
