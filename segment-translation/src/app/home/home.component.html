@@ -1,16 +1,13 @@
-<div id="calculator">
-  <textarea
-    id="inputTextarea"
-    placeholder="Enter your input here..."
-  ></textarea>
-  <button onclick="calculate()">Calculate</button>
+<div #calculator class="calculator">
+  <textarea #inputTextarea placeholder="Enter your input here..."></textarea>
+  <button (click)="calculate()">Calculate</button>
   <table id="outputTable">
     <thead>
       <tr>
         <th>Result</th>
       </tr>
     </thead>
-    <tbody id="outputBody">
+    <tbody #outputBody>
       <!-- Result rows will be added dynamically here -->
     </tbody>
   </table>
