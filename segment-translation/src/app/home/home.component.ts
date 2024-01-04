@@ -1,15 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   @ViewChild('inputTextarea') inputTextarea!: ElementRef;
   @ViewChild('outputBody') outputBody!: ElementRef;
+  hasResult = false;
 
   calculate() {
     // Get the input value from the textarea
@@ -17,6 +19,7 @@ export class HomeComponent {
     if (!inputText) {
       return;
     }
+    this.hasResult = true;
 
     // Split inputText into lines
     const inputLines = inputText.split('\n');

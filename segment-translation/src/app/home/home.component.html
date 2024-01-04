@@ -1,8 +1,9 @@
 <div #calculator class="calculator">
   <textarea #inputTextarea placeholder="Enter your input here..."></textarea>
   <button (click)="calculate()">Calculate</button>
+
   <table id="outputTable">
-    <thead>
+    <thead *ngIf="hasResult">
       <tr>
         <th>Result</th>
       </tr>
