@@ -14,10 +14,13 @@ export class HomeComponent {
   calculate() {
     // Get the input value from the textarea
     const inputText = this.inputTextarea?.nativeElement.value;
+    if (!inputText) {
+      return;
+    }
 
     // Split inputText into lines
     const inputLines = inputText.split('\n');
-    console.log(inputLines);
+    console.log('outputBody', this.outputBody);
 
     // Clear previous results
     const outputBody = this.outputBody.nativeElement;
@@ -36,6 +39,8 @@ export class HomeComponent {
 
       // Append the new row to the output table body
       outputBody.appendChild(newRow);
+
+      console.log('outputBody', this.outputBody);
     });
   }
 }
