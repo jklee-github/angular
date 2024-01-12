@@ -20,6 +20,7 @@
     "@angular/router": "^17.0.0",
     "chinese-s2t": "^1.0.0",
     "rxjs": "~7.8.0",
+    "translate": "^2.0.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
