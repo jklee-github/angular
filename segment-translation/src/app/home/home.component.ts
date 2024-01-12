@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
+import { sanitizeString, ignoreWords } from './home.utils.js';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -20,6 +22,8 @@ export class HomeComponent {
       return;
     }
     this.hasResult = true;
+
+    // translate here
 
     // Split inputText into lines
     const inputLines = inputText.split('\n');
