@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import Chinese from 'chinese-s2t';
 
 import { sanitizeString, ignoreWords } from './home.utils.js';
 
@@ -24,6 +25,8 @@ export class HomeComponent {
     this.hasResult = true;
 
     // translate here
+    const simplifiedString = Chinese.t2s(sanitizeString(inputText));
+    console.log('simplifiedString', simplifiedString);
 
     // Split inputText into lines
     const inputLines = inputText.split('\n');
